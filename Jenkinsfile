@@ -32,9 +32,20 @@ pipeline {
     }
 
     stage('6') {
-      steps {
-        echo '6'
-        input(message: 'r u sure u want', id: 'xxc', ok: 'xbxc', submitter: 'xcbx', submitterParameter: 'xbxcnz')
+      parallel {
+        stage('6') {
+          steps {
+            echo '6'
+            input(message: 'r u sure u want', id: 'xxc', ok: 'xbxc', submitter: 'xcbx', submitterParameter: 'xbxcnz')
+          }
+        }
+
+        stage('') {
+          steps {
+            input(message: '5555555', id: '555555', ok: '55555555', submitter: '1', submitterParameter: '2')
+          }
+        }
+
       }
     }
 
