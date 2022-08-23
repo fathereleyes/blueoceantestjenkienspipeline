@@ -34,6 +34,7 @@ pipeline {
     stage('6') {
       steps {
         echo '6'
+        input(message: 'r u sure u want', id: 'xxc', ok: 'xbxc', submitter: 'xcbx', submitterParameter: 'xbxcnz')
       }
     }
 
