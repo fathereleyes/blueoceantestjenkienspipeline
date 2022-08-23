@@ -37,10 +37,8 @@ pipeline {
           steps {
             input(message: 'r u sure u want', id: 'xxc', ok: 'xbxc', submitter: 'xcbx', submitterParameter: 'xbxcnz')
             echo '6'
-            retry(count: 3) {
-              echo '33333333'
-            }
-
+            retry(count: 3)
+            sh 'no'
           }
         }
 
