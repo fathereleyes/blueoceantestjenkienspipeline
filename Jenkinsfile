@@ -35,12 +35,16 @@ pipeline {
       parallel {
         stage('6') {
           steps {
-            echo '6'
             input(message: 'r u sure u want', id: 'xxc', ok: 'xbxc', submitter: 'xcbx', submitterParameter: 'xbxcnz')
+            echo '6'
+            retry(count: 3) {
+              echo '33333333'
+            }
+
           }
         }
 
-        stage('') {
+        stage('error') {
           steps {
             input(message: '5555555', id: '555555', ok: '55555555', submitter: '1', submitterParameter: '2')
           }
